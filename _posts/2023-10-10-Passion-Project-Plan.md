@@ -3,7 +3,7 @@ toc: true
 comments: true
 layout: post
 title: Plan for Passion Project
-description: Build your first Blog.  This will help us communicate results.
+description: This is our Passion Project Plan
 type: plans
 courses: { compsci: {week: 6} }
 ---
@@ -23,6 +23,9 @@ Our development process hinges on rigorous testing. Weekly feedback loops via Sl
 
 **Scrum Meetings and Schedule:**
 At the onset of each week, we will convene for Scrum meetings. These sessions will serve as a compass, guiding us through our objectives, strategies, and task assignments. By categorizing these plans in the tangibles section of our shared repository, we ensure accessibility, visibility, and accountability for all team members.
+## Design so far
+<br>
+![]({{site.baseurl}}/images/frog-game.jpeg)
 
 **Frontend Repository Components:**
 
@@ -31,7 +34,9 @@ At the onset of each week, we will convene for Scrum meetings. These sessions wi
 3. **JavaScript Files:** Handle client-side logic for interactions, game mechanics, and backend communication.
 4. **Assets Folder:** Store images, icons, audio files, and other media elements used in the game.
 5. **Libraries and Frameworks:** Include third-party tools to streamline development (e.g., jQuery, Phaser.js).
+
 **Backend Repository Components:**
+
 1. **Database Management:** Scripts for database creation, table structures, and relationships.
 2. **Server-side Logic:** Functions and scripts governing player accounts, game state, and multiplayer interactions.
 3. **API Endpoints:** Definition and management of endpoints facilitating data exchange between frontend and backend.
@@ -40,10 +45,13 @@ At the onset of each week, we will convene for Scrum meetings. These sessions wi
 6. **Database Connections:** Configurations for interfacing with external databases or services.
 7. **Error Handling and Logging:** Mechanisms for monitoring and troubleshooting backend code.
 8. **Testing and Debugging Tools:** Scripts and configurations for automated testing, debugging, and monitoring.
-**Conclusion:**
+9. **Conclusion:**
 Our passion project aims not only to showcase our skills but also to provide an immersive gaming experience for players. Through meticulous planning, transparent communication, and diligent testing, we are committed to delivering a multiplayer fighting game that leaves a lasting impression.
-————
-Expanded part of what the frontend repo will be for:
+
+## Flowchart Design:
+![]({{site.baseurl}}/images/Flow-Chart.jpg)
+**Expanded part of what the frontend repo will be for:**
+
 1. **HTML Files:** These would define the structure of the game's pages. For example, we would have HTML files for the main menu, character selection screen, and the actual gameplay interface.
 2. **CSS Files:** These would control the visual style of our game. This includes things like color schemes, fonts, layout, and any animations or transitions we’d want to implement.
 3. **JavaScript Files:** This is where the “client-side” logic for your game would reside. It would handle interactions like selecting characters, managing game mechanics (like combat), and communicating with the backend (if needed).
@@ -67,7 +75,3 @@ Expanded part of backend repo:
 10. **Deployment and Hosting Information:** We might include files related to deploying the backend on a server or cloud platform.
 Overall, the backend repository serves as the engine that powers your multiplayer fighting game. It manages the data, logic, and communication necessary to create a seamless gaming experience for our users. It's a pivotal part of our project's architecture and requires careful planning and organization.
 
-## Design so far
-![]({{site.baseurl}}/images/frog-game.jpeg)
-
-![]({{site.baseurl}}/images/Flow-Chart.jpg)
