@@ -15,6 +15,8 @@ white = (255, 255, 255)
 black = (0, 0, 0)
 
 # Load frog images and facts
+import os
+print("Current Working Directory:", os.getcwd())
 frog_images = [pygame.image.load(f'frog{i}.png') for i in range(1, 7)]
 frog_facts = [
     "Frogs are amphibians.",
