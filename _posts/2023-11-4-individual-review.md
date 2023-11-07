@@ -5,7 +5,7 @@ layout: post
 title: Individual Review
 description: My Individual Review
 type: tangibles
-courses: { compsci: {week: 11} }
+courses: { compsci: {week: 12} }
 ---
 
 # Individual Review
@@ -24,3 +24,5 @@ This is some basic JS Code that I added to our page to make it more interactice.
 
 ## Key Commit: 
 The information being the most important part of our project means that the code I just talked about IS the key commit since without it there would have been no data about the frogs, whie the whole point of our project was that it was a frog API/search engine. 
+
+[Collegeboard Quiz](https://jm1021.github.io/sergiStudent//2023/11/01/MC-quiz-plans.html)
