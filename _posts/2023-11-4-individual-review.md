@@ -4,7 +4,7 @@ comments: true
 layout: post
 title: Individual Review
 description: My Individual Review
-type: tangibles
+type: hacks
 courses: { compsci: {week: 12} }
 ---
 
@@ -26,3 +26,12 @@ This is some basic JS Code that I added to our page to make it more interactice.
 The information being the most important part of our project means that the code I just talked about IS the key commit since without it there would have been no data about the frogs, whie the whole point of our project was that it was a frog API/search engine. 
 
 [Collegeboard Quiz](https://jm1021.github.io/sergiStudent//2023/11/01/MC-quiz-plans.html)
+
+[Team Teach Notes](https://jm1021.github.io/sergiStudent//2023/11/04/team-teach-notes_IPYNB_2_.html)
+
+[Pseudo Code Notes](https://jm1021.github.io/sergiStudent//2023/10/23/Pseudo-overview_IPYNB_2_.html)
+
+[Python Notes](https://jm1021.github.io/sergiStudent//2023/10/23/Python-overview_IPYNB_2_.html)
+
+[N@tms Reviews](https://jm1021.github.io/sergiStudent//2023/11/02/N@tm-reviews.html)
+
