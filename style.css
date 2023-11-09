@@ -334,3 +334,17 @@ section #title .credits.right { float: right; }
   .score-title {
     font-size: 16px;
   }
+
+/* Add your CSS styles here */
+#interactive-div {
+  text-align: center;
+  padding: 20px;
+}
+
+#click-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

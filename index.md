@@ -24,15 +24,17 @@ At the beginning of the course after downloading all necessary extensions and ge
 
 <br><br>
 
-<div class="container">
-      <div class="info">
-        <h1>2048</h1>
-        <div class="score-container">
-          <div class="score-title">score</div>
-          <span id="score">0</span>
-        </div>
-      </div>
-      <span id="result">Join the numbers and get to the <b>2048</b> tile!</span>
-      <div class="grid"></div>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Include your CSS file here -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <div id="interactive-div">
+        <button id="click-button">Change Background</button>
     </div>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script> <!-- Include your JavaScript file here -->
+</body>
+</html>

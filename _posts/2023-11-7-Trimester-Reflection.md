@@ -19,8 +19,8 @@ courses: { compsci: {week: 12} }
 - Practiced CSS/JS as the frontend developer
 - Was able to help out on backend
 - Created my first working project ever :DDD
-- Passion project turned out well (I liked it)
-- Learned to collaborate
+- Passion project turned out well (I liked it) despite all the troubles
+- Learned to collaborate and work as a team
 
 ## Troubles: 
 - A lot of errors that slowed down the process
@@ -28,14 +28,16 @@ courses: { compsci: {week: 12} }
 - Not everyone always worked on what they were supposed to
 - Trouble understanding directions (being a little behind)
 - Issues linking backend and frontend
-- Our group didn't think too much ahead; we should have. 
+- Our group didn't think too much ahead; we should have
+- We had to redo the passion project once or twice which cut our time short
+- Our group wasn't too organized to say the least
 
 
 ## Goals/Plans: 
 - Get better at Python/Pseudo code
 - Learn js!
 - Maybe try a different role next tri (backend or scrum master/dev ops)
-- Try something new for my project, make a game maybe
+- Try something new for my project, make a game by myself maybe
 - Get better at typing
 - Not procrastinate 
 - Plan ahead and pay attention in class
