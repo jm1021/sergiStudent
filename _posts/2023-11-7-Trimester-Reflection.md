@@ -25,6 +25,8 @@ courses: { compsci: {week: 12} }
 ## Troubles: 
 - A lot of errors that slowed down the process
 - Error 1 (multiple times)
+- Repo Github Actions issues
+- Misspeling file names or inputting wrong numbers in the date section which crashed the localhost
 - Not everyone always worked on what they were supposed to
 - Trouble understanding directions (being a little behind)
 - Issues linking backend and frontend

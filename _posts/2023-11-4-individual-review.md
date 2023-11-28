@@ -64,3 +64,7 @@ This is some basic JS Code that I added to our page to make it more interactive.
 
 **This is my Trimester 1 Reflection:**
 [Reflection:](https://jm1021.github.io/sergiStudent//2023/11/07/Trimester-Reflection.html)
+<br><br>
+
+**This is additional resources for me:**
+[Python/JS/Pseudo Code Resources](https://jm1021.github.io/sergiStudent//2023/11/09/Helpful-resources.html)
