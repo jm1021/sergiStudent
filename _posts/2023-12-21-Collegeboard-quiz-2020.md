@@ -126,7 +126,12 @@ courses: { compsci: {week: 15} }
 
 ## Takeaways/Learnings from the quiz
 
+<br>
+
 >**I learned that throughout the quiz I've had a harder time with these concepts, therefore I should review and study them more than others**
+
+<br>
+
 >- Safe computing
 >- Crowdsourcing
 >- Legal and Ethical Concerns
@@ -138,6 +143,8 @@ courses: { compsci: {week: 15} }
 >- Boolean
 >- Identifying and Correcting Errors
 
+<br><br>
+
 ## Ways to Study:
 >- Review Team Teaches
 >- Google
@@ -147,6 +154,8 @@ courses: { compsci: {week: 15} }
 >- Watch Related Videos
 >- Read Multiple Sources
 >- Ask Teammates For Help/Advice
+
+<br><br>
 
 ## Final Quiz Reflection
 >- Overall, I am not too happy with my score (49/67), however, this will help me grow from my mistakes and help me focus up and improve on topics I have more trouble with. To review and study, I will utilize previous team teaches and watch youtube videos that explain how each of these topics works and what collegeboard expects you to know about them. In general though, I feel like I learned many new things so I am happy with my progress and growth throughout this trimester and especially this class. I finally got the chance to have a new team, so hopefully my new teammates will be able to support me and help me improve my flaws and weaknesses in this class. 
