@@ -15,17 +15,24 @@ courses: { compsci: {week: 16} }
 <br>
 
 {"name": "Alice", "age": 25, "isStudent": true}
+
 <br>
 
 >- It suppports strings, numbers, booleans, arrays, objects, and null
 >- Objects: Enclosed in curly braces {}, represent a collection of key-value pairs
 
+<br>
+
 {"person": {"name": "Bob", "age": 30}}
+
 <br>
 
 >- Arrays: Ordered list of values enclosed in square brackets []
 
+<br>
+
 {"fruits": ["apple", "banana", "orange"]}
+
 <br>
 
 >- JSON is commonly used to represent structured data, such as user information
@@ -40,4 +47,17 @@ courses: { compsci: {week: 16} }
   }
 }
 
+>- API (Application Programming Interface): 
+- APIs enable different software systems to communicate. JSON is commonly used for data exchange in API interactions.
+- HTTP Requests: APIs often use HTTP requests (GET, POST, etc.) to send and receive data.
+- Response Format: APIs typically respond with JSON-formatted data.
 
+<br>
+
+{
+  "status": "success",
+  "data": {
+  }
+}
+
+<br>

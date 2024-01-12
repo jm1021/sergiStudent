@@ -256,4 +256,9 @@ data.forEach(user => {
 <br><br>
 
 ## JSON: 
->- []()
+>- [JSON Overview](https://jm1021.github.io/sergiStudent//2024/01/09/JSON-lesson.html)
+
+<br>
+
+## DOM: 
+>- [DOM Overview]()
