@@ -262,3 +262,252 @@ data.forEach(user => {
 
 ## DOM: 
 >- [DOM Overview]()
+
+<br>
+
+## Local Storage: 
+
+export class LocalStorage{
+    constructor(keys){
+        this.keys = keys;
+        console.log("browser local storage available: "+String(this.storageAvailable));
+    }
+
+    get storageAvailable(){ //checks if browser is able to use local storage
+        let type = "localStorage";
+        let storage;
+        try {
+          storage = window[type];
+          const x = "__storage_test__";
+          storage.setItem(x, x);
+          storage.removeItem(x);
+          return true;
+        } catch (e) {
+          return (
+            e instanceof DOMException &&
+            // everything except Firefox
+            (e.code === 22 ||
+              // Firefox
+              e.code === 1014 ||
+              // test name field too, because code might not be present
+              // everything except Firefox
+              e.name === "QuotaExceededError" ||
+              // Firefox
+              e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            storage &&
+            storage.length !== 0
+          );
+        }
+    }
+
+    save(key){ //save a particular key
+        if(!this.storageAvailable){return}; //check if local storage is possible
+        window.localStorage.setItem(key,this[key]);
+    }
+    
+    load(key){//load a particular key
+        if(!this.storageAvailable){return}; //check if local storage is possible
+        this[key] = window.localStorage.getItem(key);
+    }
+
+    saveAll(){ //saves data for all keys in this.keys
+        if(!this.storageAvailable){return}; //check if local storage is possible
+        Object.keys(this.keys).forEach(key => {
+            window.localStorage.setItem(key,this[key]);
+        });
+    }
+
+    loadAll(){//loads data from all keys in this.keys
+        if(!this.storageAvailable){return}; //check if local storage is possible
+        Object.keys(this.keys).forEach(key => {
+            this[key] = window.localStorage.getItem(key);
+        });
+    }
+}
+
+export default LocalStorage;
+
+>**Getters**
+
+>- the getter: storageAvailable, this getter returns true if your browser is capable of using Local Storage, otherwise it returns an error message.
+
+>**Functions**
+
+>- the function save(key), this function saves the value this.key to the local storage with the respective key
+- the function load(key), this function loads the value from the local storage with the respective key to this.key
+- the function saveAll(), this function saves all of the values of this.key from the class’ this.keys to local storage
+- the function loadAll(), this function load all of the values from the local storage from the class’ this.keys to their respective this.key
+
+## Controller Class
+
+import LocalStorage from "./LocalStorage.js";
+import GameEnv from "./GameEnv.js";
+import GameControl from "./GameControl.js";
+
+export class Controller extends LocalStorage{
+    constructor(){
+        var keys = {currentLevel:"currentLevel",gameSpeed:"gameSpeed"}; //default keys for localStorage
+        super(keys); //creates this.keys
+    }
+
+<br>
+
+>-  Import LocalStorage, GameEnv, and GameControl, and export controller class
+>- Run the initialization after a different time than the constructor. This is used to update the current level and start the eventListeners.
+
+<br>
+
+//separated from constructor so that class can be created before levels are added
+    initialize(){ 
+        this.loadAll(); // load data
+        
+        if(this[this.keys.currentLevel]){ //update to active level
+            GameControl.transitionToLevel(GameEnv.levels[Number(this[this.keys.currentLevel])]);
+        }
+        else{ //if not currentLevel then set this.currentLevel to 0 (default)
+            this[this.keys.currentLevel] = 0;
+        }
+
+        if(this[this.keys.gameSpeed]){ //update to custom gameSpeed
+           GameEnv.gameSpeed = Number(this[this.keys.gameSpeed]);
+        }
+        else{ //if not gameSpeedthen set this.gameSpeed to GameEnv.gameSpeed (default)
+            this[this.keys.gameSpeed] = GameEnv.gameSpeed;
+        }
+        
+        window.addEventListener("resize",()=>{ //updates this.currentLevel when the level changes
+            this[this.keys.currentLevel] = GameEnv.levels.indexOf(GameEnv.currentLevel);
+            this.save(this.keys.currentLevel); //save to local storage
+        });
+
+        window.addEventListener("speed",(e)=>{ //updates this.gameSpeed when a speed event is fired
+            this[this.keys.gameSpeed] = e.detail.speed();
+            GameEnv.gameSpeed = this[this.keys.gameSpeed]; //reload or change levels to see effect
+            this.save(this.keys.gameSpeed); //save to local storage
+        })
+ 
+    }
+
+<br>
+
+>- This code is a getter, it creates a table. The table is used to include level tags and the level number.
+
+
+<br>
+
+    get levelTable(){
+        var t = document.createElement("table");
+        //create header
+        var header = document.createElement("tr");
+        var th1 = document.createElement("th");
+        th1.innerText = "#";
+        header.append(th1);
+        var th2 = document.createElement("th");
+        th2.innerText = "Level Tag";
+        header.append(th2);
+        t.append(header);
+
+        //create other rows
+        for(let i = 0;i < GameEnv.levels.length;i++){
+            var row = document.createElement("tr");
+            var td1 = document.createElement("td");
+            td1.innerText = String(i);
+            row.append(td1);
+            var td2 = document.createElement("td");
+            td2.innerText = GameEnv.levels[i].tag;
+            td2.addEventListener("click",()=>{ // when player clicks on level name
+                GameControl.transitionToLevel(GameEnv.levels[i]); //transition to that level
+            })
+            row.append(td2);
+            t.append(row);
+        }
+
+        return t; //returns <table> element
+    }
+
+<br>    
+
+>- Used for the speedDiv, changes the gameSpeed setting. 
+
+    
+    get speedDiv(){
+        var div = document.createElement("div"); //container
+
+        var a = document.createElement("a"); //create text
+        a.innerText = "Game Speed";
+        div.append(a);
+
+        var input1 = document.createElement("input"); //create inputfeild
+        input1.type = "number"; //type number (1234...)
+        const event = new CustomEvent("speed", { detail: {speed:()=>input1.value} });
+        input1.addEventListener("input",()=>{ //after input feild is edited
+            window.dispatchEvent(event); //dispatch event to update game speed
+        })
+        div.append(input1);
+        
+        return div; //returns <div> element
+    }
+}
+
+export default Controller;
+
+<br>
+
+## Changes in the game.md file
+
+<br>
+
+#gameBegin, #controls, #gameOver, #settings {
+      position: relative;
+        z-index: 2; /*Ensure the controls are on top*/
+    }
+
+<br>
+
+>- To add an extra button:
+
+<br>
+
+.sidenav {
+      position: fixed;
+      height: 100%; /* 100% Full-height */
+      width: 0px; /* 0 width - change this with JavaScript */
+      z-index: 3; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+      background-color: black; 
+    }
+<br>
+
+<div id="mySidebar" class="sidenav">
+  <a href="javascript:void(0)" id="toggleSettingsBar1" class="closebtn">&times;</a>
+</div>
+
+<br>
+
+>- Sidebar: 
+
+<br>
+
+<div id="canvasContainer">
+    <div id="gameBegin" hidden>
+        <button id="startGame">Start Game</button>
+    </div>
+    <div id="controls"> <!-- Controls -->
+        <!-- Background controls -->
+        <button id="toggleCanvasEffect">Invert</button>
+    </div>
+    <div id="settings"> <!-- Controls -->
+        <!-- Background controls -->
+        <button id="toggleSettingsBar">Settings</button>
+    </div>
+    <div id="gameOver" hidden>
+        <button id="restartGame">Restart</button>
+    </div>
+</div>
+
+<br>
