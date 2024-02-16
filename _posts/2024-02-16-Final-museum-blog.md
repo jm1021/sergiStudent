@@ -1,6 +1,6 @@
 ---
 toc: true
-comments: false
+comments: true
 layout: post
 title: N@TM Tri 2 Review Ticket
 description: N@TM Review Ticket
