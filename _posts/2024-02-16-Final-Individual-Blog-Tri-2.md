@@ -13,24 +13,33 @@ courses: { compsci: {week: 23} }
 >- Over the course of this trimester the CPT project was a fun, yet overwhelming experience for me. It required a lot of creativity, thoughtfullness and organization, which my atlas team was able to accomplish
 >- The plan for the cpt project was to create a website called Atlas which would be money related an accessible to the public. We were each planning to create a seperate feature. Torin was gonna do a search stock function where upon searching a specific stock it would display a great amount of facts about that stock including a real-time graph. Nandan was planning on creating a feature involving crypto, where each user would be given a certain amount of currency to then buy a coin which would change price immediately assuming millions of people were buying it at the same time, obviously randomized. Varun wanted to have a similar feature to Torins and Nandans, so he decided to create a stocks feature where a user could buy and sell certain stocks that we set as available for purchase. Finally, my feature was going to be real estate, where any user could browse through an address or area in san diego county to find a house they're interested in buying. Facts such as sq feet, beds, baths, and price were displayed including an image of the house. 
 <br>
-
-![]({{site.baseurl}}/images/atlas.png)
-
-## Meeting CPT requirements
-
->- Before starting our project our group had to make sure we were meeting the CPT requirements, which where mostly CRUD operations, SQLite dabatases, JWT Tokens and more. 
-
->- Throughout Atlas CRUD operations were seen when an Admin could login and delete or edit a users account using a JWT Token that would either get accepted or denied, depending on its role of user or admin. This was also implemented in my personal feature where the admin could delete or edit certain houses in the database while the users could not. If a user was trying to delete or edit something only the admin could, they would get unathorized, thus redirected to a 403 page. 
-<br>
-![]({{site.baseurl}}/images/housedelete.png)
 <br>
 
->- We used SQLite databases to hold data such as users who signed up, transaction log of users, and a certain amount of houses in san diego country currecntly on SALE. Using CRUD operations our different tables in the database would indeed get altered. 
-<br>
-![]({{site.baseurl}}/images/db.png)
+## Meeting CPT Requirements: 
+
 <br>
 
->- As mentioned earlier we utilized JWT Tokens which authorized certain users known as admins to have more flexibility than others. This was implemented by adding a _role column to our users database that would check to see whether a user is User or Admin, then the active cookie would be checked for this role and allow CRUD operations or unauthorize
+| Collegeboard Requirements | Me |
+|---------------------------|----|
+| Instructions for input from one of the following: the user, a device, an online data stream, a file. | My feature takes in input from the user, and returns a specific amount of houses depending on the entered info. Users may only watch, admin can delete or edit houses. |
+| Use of at least one list (or other collection type) to represent a collection of data that is stored and used to manage program complexity and help fulfill the users purpose. | An example of a collection of data that is stored, is of the collection of houses on the backend that gets updated when an admin alters the change. This alters SQLite database, adding those changes. It helps fulfill our program’s purpose because all the data we have is given to any users interested in buying a house in San Diego County.|
+| At least one procedure that contributed to the program’s intended purpose where you have defined: the name, return type, one or more parameters: | This procedure has a name: createURL, return type: a string (the URL), and parameters: It takes two parameters - address (the address to be encoded and used in the URL) and an optional parameter k (API key with a default value). ![]({{site.baseurl}}/images/final2.png) |
+| An algorithm that includes sequencing, selection, and iteration that is in the body of the selected procedure | This function shows sequencing: follows a sequence of steps within the "get" method to handle different cases depending on the value of the 'type' parameter. Shows selection: conditionals such as if, elif, else. Shows iteration: for loop that iterates over the houses in the database. The algorithm fetches house data and constructs a JSON response, then returned by the get method. ![]({{site.baseurl}}/images/final.png)|
+| Calls to your student-developed procedure: | call to createURL , where the address is passed in as a parameter ![]({{site.baseurl}}/images/final4.png) |
+| Instructions for output (tactile, audible, visual, or ) based on input and program functionality | Fetch code that displays the table with address, beds, baths, price and square feet based on the users inputted address and distance. ![]({{site.baseurl}}/images/final5.png)
+
+## Collegeboard Video Requirements: 
+
+[Link to Video](https://github.com/jm1021/sergiStudent/assets/142563800/8fa3bd89-7063-4b2d-973b-7782ceeb2e0f)
+
+| Collegeboard Requirements | My Video |
+|---------------------------|----------|
+| Input to program | Seen in video, login and inputting address and distance |
+| At least one aspect of the functionality of your program | Houses displayed, redirected to page with image and info about house.  |
+| Output produced by program: | Display of houses. When logged in as admin, removing/editing a house alters database.  |
+| My video does not have: | any distinguishing information, voice narration |
+| My video is | a .mp4, 1 minute in length, less than 30MB in file size. |
+
 
 ### Main Commits/Pull Request for my feature:
 
@@ -49,3 +58,5 @@ courses: { compsci: {week: 23} }
 This commit right here might have not been as important but it sure did have many errors that altered our webpage and its logic. This commit allowed the users table to finally display and didnt allow for non registered/logged in users to delete or edit changes. 
 >- [Final Commit](https://github.com/sergi1207/atlas/commit/5fa72571bfaca7290f99a17596ed427579879424)
 This was our final commit really, where we finished up our project and had it all intergrated and ready for presenting. This was also a commit we had after fixing a CORS issue, which was appearing everywhere, making us stress out. Having almost everything working helped us relax and debug for the rest of the week. 
+
+
