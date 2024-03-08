@@ -25,7 +25,7 @@ courses: { compsci: {week: 25} }
 >- Specifically, main.py is what you should be looking for
 
 ### Step 2: Set Breakpoint at the Beginning of Endpoint Code:
-<br
+<br>
 
 >- Identify the endpoint you want to debug in your backend code. 
 >- Place a breakpoint at the beginning of your endpoint
