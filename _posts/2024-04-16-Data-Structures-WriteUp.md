@@ -7,6 +7,28 @@ description: A Write Up for the data structures project
 type: tangibles
 courses: { compsci: {week: 32} }
 ---
+
+<br>
+
+### Intro: 
+
+- The CPT project includes implementation of algorithms and data structures. Throughout my project I used algorithms and data structures to create a real estate project. 
+
+- To complete the CPT we had many tools to use such as vscode, github, and our teachers and teammates to help us create this unique project. 
+
+- I use lists, dictionaries, sets, trees, and many more things in my CPT to be able to make the best out of it. Examples may include my data set with the 1100+ houses. 
+
+- Overall, the CPT project helps us align our computer science skills and apply them all together with the abilities and knowledge of others to create something with true meaning and effort. 
+
+- The data structures project helped me learn integrate various projects into one. It helped me collaborate and fix errors with my team and improve my features, overall giving me a good experience throughout this trimester. 
+
+<br>
+
+![]({{site.baseurl}}/images/pm12.png)
+
+<br>
+
+
 #### Collections:
 - In my project, I use a database to manage the limited amount of houses I have in my data set. I can manually delete houses I know have been sold, or edit information about certain houses. I added this feature since these houses were on sale somewhere in December. I used a redfin API to gather the houses, and then a google API to attach an image to each house that matches it. Each house has its own page displaying its image and information such as beds, baths, etc. Each page has the address of the house encoded into the URL using a special key.
 
