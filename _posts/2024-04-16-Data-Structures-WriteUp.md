@@ -22,12 +22,6 @@ courses: { compsci: {week: 32} }
 
 - The data structures project helped me learn integrate various projects into one. It helped me collaborate and fix errors with my team and improve my features, overall giving me a good experience throughout this trimester. 
 
-<br>
-
-![]({{site.baseurl}}/images/pm12.png)
-
-<br>
-
 
 #### Collections:
 - In my project, I use a database to manage the limited amount of houses I have in my data set. I can manually delete houses I know have been sold, or edit information about certain houses. I added this feature since these houses were on sale somewhere in December. I used a redfin API to gather the houses, and then a google API to attach an image to each house that matches it. Each house has its own page displaying its image and information such as beds, baths, etc. Each page has the address of the house encoded into the URL using a special key.
@@ -405,6 +399,16 @@ def House(sqft, price, beds, baths):
             probability = closeness  # Using closeness as probability
         mostSimilar.append({'address': address, 'probability': probability})
     return mostSimilar  
+
+<br>
+
+- Here is my frontend view of the ML project
+- Once the users inputs the selected data (beds, baths, square feet, price) through my ML model, I provide a relatively close prediction to a house that would match those parameters. The top 3 houses are in order of closeness, and all are inside my built-in data set. 
+- This is all handled through a POST request. 
+
+<br>
+
+![]({{site.baseurl}}/images/pm12.png)
 
 <br>
 
