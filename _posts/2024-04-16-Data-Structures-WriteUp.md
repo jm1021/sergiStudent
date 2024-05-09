@@ -412,6 +412,10 @@ def House(sqft, price, beds, baths):
 
 <br>
 
+#### Understanding of Linear Regression and Decision Trees
+- Linear Regression is like drawing a straight line through a bunch of scattered points on a graph to predict something, like house prices. It's all about finding the best line that fits the data. On the other hand, Decision Trees are more like a series of yes-or-no questions you might ask to make a decision. They're handy for sorting data into categories or making predictions based on different factors. Both methods are valuable in data analysis, offering different ways to understand and interpret data patterns.
+
+
 
 
 
